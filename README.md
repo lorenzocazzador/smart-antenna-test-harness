@@ -1,5 +1,5 @@
 # Smart Antenna Test Harness
-![Coverage Status](https://img.shields.io/badge/coverage-dynamic%20via%20Jenkins-brightgreen)
+[![codecov](https://codecov.io/gh/lorenzocazzador/smart-antenna-test-harness/graph/badge.svg?token=YQTT0FTYTN)](https://codecov.io/gh/lorenzocazzador/smart-antenna-test-harness)
 
 A modular embedded test harness system for satellite antenna software simulation and automated validation.
 
