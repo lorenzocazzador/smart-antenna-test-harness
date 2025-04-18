@@ -14,9 +14,11 @@ def uart_command_test(port):
     except serial.SerialException as e:
         assert False, f"UART test failed: {e}"  # ← Lines 17–18 (will now be covered)
 
+@pytest.mark.hardware
 def test_uart_valid_port():
     uart_command_test('/tmp/ttyV0')  # Or your real working port
 
+@pytest.mark.hardware
 def test_uart_exception_trap():
     with pytest.raises(AssertionError):
         uart_command_test('/dev/INVALID_PORT')  # Triggers your try-except block

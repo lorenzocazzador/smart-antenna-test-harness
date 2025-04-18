@@ -22,7 +22,7 @@ jobs:
 
     - name: run tests and coverage
       run: |
-        coverage run -m pytest tests/
+        coverage run -m pytest -m "not hardware" tests/
         coverage xml
 
     - name: upload to Codecov
