@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh './scripts/deploy_test_env.sh'
+            }
+        }
+        stage('Coverage Tests') {
+            steps {
+                sh './scripts/run_coverage.sh'
+            }
+        }
+        stage('Archive Reports') {
+            steps {
+                archiveArtifacts artifacts: 'htmlcov/**', allowEmptyArchive: true
+            }
+        }
+    }
+}
