@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>📊 Test Dashboard</h1>
+    <div class="log-container">
+        {% for entry in logs %}
+            <div class="log-entry {{ entry.status }}">
+                <span class="timestamp">{{ entry.timestamp }}</span>
+                {{ entry.line }}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
